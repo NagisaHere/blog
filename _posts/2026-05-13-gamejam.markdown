@@ -1,0 +1,71 @@
+---
+layout: post
+title:  "GameJam 2026!"
+date:   2026-05-13 18:55:16 +1000
+categories: Hackathon
+---
+
+The first ever CodeJam hosted by the UQ Computing Society, in collaboration with QUT Game Development Club.
+
+## Our game (Lore)
+By Terrie Collins-Friegenhiemerlich, first-generation senior Biogenetic Engineer.
+
+100 years after the Final World Conflict, 2xHelix INCO. was assigned by the governing body of Utova, the greatest country of our blue Earth, to develop an ultimate cure to the last of humanity's worries. That is why a great lump of the national funds is allotted to this hegemon.
+
+Like all oligarchies that formed before my birth and will survive after I die, 2xHelix INCO. is yet another front for a terrible idea conjured up by imbeciles with more money than neurons, despite having gone through the second evolution. They commanded that I design the blueprint of a human, but "better", and fulfilled their requests I did.
+
+In this vault you shall find the undoing of their mistakes once their Grand Vision was inevitably revealed to be a child's broken kaleidoscope toy. You unfortunate soul who is personally reading my message, know that I habour no ill will towards you. The Key-board that is… key to decrypting this password was a measure in place to prevent the activation of something greater than yourself.
+
+Because the insipid human-but-better lifeform that I created is one that shan't carry the power of the opposable thumbs and the wormy digits of man. Because its evolutionary path is not determined by its environment nor its present. Pray that not a single cell in your sad body hasn't frozen over by the time it crawled by your side.
+
+Leave this place. Now.
+
+You are inserted in to type in what the late engineer needs to type. 
+
+
+### Instructions
+"Employee 162A-1, the following are instructions on how to operate this Key-board."
+"As you can tell, you have 5 minutes in total to type in whatever our late engineer wished for you to type."
+"We cannot revert nor cut the connection of the cavern's insulation system to the Key-board. We cannot afford the bioplan to fall in danger."
+"When you make a mistake, DO NOT press the BACKSPACE MULTIPLE times to delete incorrect letters. Press and HOLD the BACKSPACE to delete all of your mistakes instead."
+"This is because every press of the BACKSPACE BUTTON decreases the surrounding temperatures by 10 degrees Celcius."
+"No, you shall not ask us why."
+"Your suit cannot keep you warm at the current temperature for too long as it is. Should it decrease further, we cannot guarantee what would happen to your extremities."
+"You have at most 9 BACKSPACE BUTTON presses by our estimate."
+"By the time the temperature lowers, your keyboard may not register key presses as well. Make sure you are careful of this."
+
+You can find a link to the game [here](https://nagisahere.itch.io/frigid-digits).
+
+## Development Timeline
+
+Leading into this, I was actually sick and caught a cold on Wednesday! I almost thought of dropping out many times, but something in me told me to keep going.
+
+Beginning on Friday, we instantly started creating the basic typing interface, menu music, and and other stuff.
+
+From Saturday, all the 3d printing started for about 30 hours straight. The tensioner parts, servo housings, breadboard housing, guide reels and the trophy. All the code required to have the game send bluetooth commands over to the ESP32 to manipulate the servo motors was also done.
+
+On Sunday, I was scrambling to try get everything assembled and the save functionality working. There were a coupole that 
+
+We then had our two hour demo, and was surprised to be told that we had to present in front of everyone!
+
+You can find a link to the presentation [here](https://www.youtube.com/live/5pJCAfMZ5yA?si=l9pe_9vozZaz34XY&t=1553).
+
+In the end, we walked with the honourable people's choice. We're so glad that a lot of people enjoyed playing our game.
+
+Not sleeping was worth it.
+
+
+{% include figure.html img_path="/assets/images/2026/GJ-1.jpeg" alt_txt="" caption="" %}
+{% include figure.html img_path="/assets/images/2026/GJ-2.jpeg" alt_txt="" caption="" %}
+
+
+
+## Frigid Digits Team
+Huge credits 
+Team Members: 
+- Ryan Wang (3rd Year BCompSci) - 
+- Helen Ngo (3rd Year BCompSci) - Artist and Animation
+- Augustus Chong (2nd Year BCompSci) - Game Programmer and Sound Designer
+- Patricio Valeria (3rd Year BSci (CompSci Major)) - Game Programmer and Animation
+
+
