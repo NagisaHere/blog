@@ -5,7 +5,7 @@ date:   2026-05-13 18:55:16 +1000
 categories: Hackathon
 ---
 
-The first ever CodeJam hosted by the UQ Computing Society, in collaboration with QUT Game Development Club.
+The first ever GameJam hosted by the UQ Computing Society, in collaboration with QUT Game Development Club.
 
 ## Our game (Lore)
 By Terrie Collins-Friegenhiemerlich, first-generation senior Biogenetic Engineer.
@@ -35,6 +35,9 @@ You are inserted in to type in what the late engineer needs to type.
 "By the time the temperature lowers, your keyboard may not register key presses as well. Make sure you are careful of this."
 
 You can find a link to the game [here](https://nagisahere.itch.io/frigid-digits).
+Or you can watch a demo of the game here;
+
+{% include youtube.html id="5X_pu9NgkuU" %}
 
 ## Development Timeline
 
@@ -61,11 +64,10 @@ Not sleeping was worth it.
 
 
 ## Frigid Digits Team
-Huge credits 
+Huge credits to the Frigid Digits Team!
 Team Members: 
-- Ryan Wang (3rd Year BCompSci) - 
-- Helen Ngo (3rd Year BCompSci) - Artist and Animation
-- Augustus Chong (2nd Year BCompSci) - Game Programmer and Sound Designer
-- Patricio Valeria (3rd Year BSci (CompSci Major)) - Game Programmer and Animation
-
+- Ryan Wang (3rd Year BCompSci) - Embedded Engineer
+- [Helen Ngo](https://www.linkedin.com/in/helen-ngo-a38b772a1/) (2rd Year BCompSci) - Artist and Animation
+- [Augustus Chong](https://www.linkedin.com/in/augustus-chong-3793613b8/) (2nd Year BCompSci) - Game Programmer and Sound Designer
+- [Patricio Villela](https://www.linkedin.com/in/patricio-villela-g%C3%B3mez-9407bb282/) (2rd Year BSci (CompSci Major)) - Game Programmer and Animation
 
