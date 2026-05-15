@@ -1,9 +1,15 @@
 <figure>
     <p>
-	<img
-    	    src="{{ include.img_path | relative_url }}"
-    	    alt="{{ include.alt_txt }}"
-    	/>
+    {%- assign paths_string = include.img_paths | default: include.img_path -%}
+    {%- assign img_array = paths_string | split: "," -%}
+    {%- assign alt_array = include.alt_txt | split: "," -%}
+
+    {%- for img in img_array -%}
+        <img
+            src="{{ img | strip | relative_url }}"
+            alt="{{ alt_array[forloop.index0] | strip }}"
+        />
+    {%- endfor -%}
     </p>
     <figcaption>
         {{ include.caption }}

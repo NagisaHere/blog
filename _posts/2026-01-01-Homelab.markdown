@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Homelab"
+author: "Ryan Wang"
+date:   2026-01-01 00:00:00 +1000
+categories: 
+tags: reflection
+---
+Here is all the services I use in my homelab!
+
+For the most part, this runs in a cheap laptop that is running 24/7 on CasaOS.
+
+## Running Services
+- Tailscale
+- Gitea
+    - Sometimes used for solo projects
+- Syncthing
+- Cloudflared (for SSH)
+- Nginx Reverse Proxy Manager
+    - SSL certs via letsencrypt and cloudflare api
+- Nextcloud
+    - Personal cloud
+- Vaultwarden
+
+## Services I'm trying to configure
+- Bambuddy
+- Navidrome
+- Authentik 
+- LocalStack

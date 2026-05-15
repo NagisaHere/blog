@@ -54,7 +54,7 @@ Didn't end up working in the end, but it was worth a shot.
 
 Sunday we finalised everything and recorded a demo video of it working at the last minute. Turns out having a high baud rate with jumper wires wasn't really the best idea (mmm resistance). We also had a backup option using a bomb game in case the VR stuff didn't work, so we utilised it for our presentation instead.
 
-(WIP) You can find a quick demo of our project below.
+(WIP) You can find a quick demo of our project below, repo [here](https://github.com/Alice-Lesmes/MicroHack2026).
 
 
 

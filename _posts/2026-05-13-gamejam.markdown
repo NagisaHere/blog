@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "GameJam 2026!"
+author: "Ryan Wang"
 date:   2026-05-13 18:55:16 +1000
-categories: Hackathon
+categories: hackathon
+tags: uqcs hackathon 2026
 ---
 
 The first ever GameJam hosted by the UQ Computing Society, in collaboration with QUT Game Development Club.
@@ -36,7 +38,7 @@ You are inserted in to type in what the late engineer needs to type.
 
 What I constructed for the team during the hackathon was a haptic glove largely inspired by LucasVR; where a press of backspace would lose a finger, and thus lock your finger in place using a tensioner reel and a servo motor.
 
-You can find a link to the game [here](https://nagisahere.itch.io/frigid-digits).
+You can find a link to the game [here](https://nagisahere.itch.io/frigid-digits), alongside the [repo](https://github.com/NagisaHere/Gamejam-2026).
 Or you can watch a demo of the game here;
 
 {% include youtube.html id="5X_pu9NgkuU" %}

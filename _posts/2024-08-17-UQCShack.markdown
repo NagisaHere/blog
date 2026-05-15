@@ -6,5 +6,30 @@ date:   2024-08-17 00:00:00 +1000
 categories: competitions hackathon
 tags: uqcs hackathon 2024
 ---
-# Finding.wav
-WIP!
+2024 marks the third hackathon I have participated in.
+
+### Finding.wav
+The name of our project!
+
+Like a dating app, but for making playlists.
+
+An app to help you find the songs that you actually want, or... hear me out... wav... to have on your playlists by asking you to make it while listening to the songs.
+Features
+    Choose to listen to the songs or go off just looks... how vain...
+    Swipe like any self-respecting dating app (right = yes, left = no)
+    Buttons to swipe for you, if you're too lazy to swipe those matches
+    Skipped a song right at the end? It's added to the playlist since you liked it enough to listen
+    Exporting of playlists as .m3u, saved to your music folder
+    Fully offline (works off your downloaded songs)
+    Fully-Functioning Playhead Seeker (ignore the slight jitters, drank too many energy drinks)
+
+Card (Dating-app swiping) animation and functionality from Twyper API Level: 31
+
+The repo is available [here](https://github.com/Alice-Lesmes/Finding.Wav).
+
+{% include figure.html img_path="/assets/images/2024/finding.png" alt_text="" caption=""%}
+
+
+### Team
+- Ryan Wang - UI and exporting
+- Alice Lesmes - Music Recommendation Algorithm and Data Management
