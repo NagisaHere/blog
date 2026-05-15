@@ -34,6 +34,8 @@ You are inserted in to type in what the late engineer needs to type.
 "You have at most 9 BACKSPACE BUTTON presses by our estimate."
 "By the time the temperature lowers, your keyboard may not register key presses as well. Make sure you are careful of this."
 
+What I constructed for the team during the hackathon was a haptic glove largely inspired by LucasVR; where a press of backspace would lose a finger, and thus lock your finger in place using a tensioner reel and a servo motor.
+
 You can find a link to the game [here](https://nagisahere.itch.io/frigid-digits).
 Or you can watch a demo of the game here;
 
@@ -43,11 +45,11 @@ Or you can watch a demo of the game here;
 
 Leading into this, I was actually sick and caught a cold on Wednesday! I almost thought of dropping out many times, but something in me told me to keep going.
 
-Beginning on Friday, we instantly started creating the basic typing interface, menu music, and and other stuff.
+Beginning on Friday, we instantly started creating the basic typing interface, menu music, and and other stuff. It was a very hacky and poor typing interface at first namely following this [tutorial](https://www.youtube.com/watch?v=koWEn_WuvgY&list=PLpwc3ughKbZcJq-Sxew6OippNqlVc924q&index=5).
 
 From Saturday, all the 3d printing started for about 30 hours straight. The tensioner parts, servo housings, breadboard housing, guide reels and the trophy. All the code required to have the game send bluetooth commands over to the ESP32 to manipulate the servo motors was also done.
 
-On Sunday, I was scrambling to try get everything assembled and the save functionality working. There were a coupole that 
+On Sunday, I was scrambling to try get everything assembled and the save functionality working. We also printed out a trophy for anyone who could beat our game in the fastest time.
 
 We then had our two hour demo, and was surprised to be told that we had to present in front of everyone!
 

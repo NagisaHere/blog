@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "UQCS Hackathon 2024"
+author: "Ryan Wang"
+date:   2024-08-17 00:00:00 +1000
+categories: competitions hackathon
+tags: uqcs hackathon 2024
+---
+# Finding.wav
+WIP!
