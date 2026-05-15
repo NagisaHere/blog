@@ -6,4 +6,8 @@
   font-display: swap;
 }
 
+body {
+    font-family: 'NothingFont'
+}
+
 @import minima
