@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "QUT Hackathon 2024"
+author: "Ryan Wang"
+date:   2024-08-16 00:00:00 +1000
+categories: competitions hackathon
+tags: qut hackathon 2024
+---
+(WIP) This marks the 2nd hackathon I have participated in.
+
+### Assymetrical Asteroids
+The name of our project!
+
+### Team
+- Ryan Wang - Game
+- Alice Lesmes - Phone network
+- Jackie Cheng - Game

@@ -14,13 +14,13 @@ Here is my Museum of Failures!
 
 # Coursework
 - Had to drop two courses to keep up mentally in Sem 2 of 2025
-    - What I learnt: 
+    - What I learnt: For Operating systems at least, I probably should have swallowed my pride and accepted a bad second assignment grade, as the difficulty of the course would have been fine if I kept persisting through to the third assignment.
 
 # Hackathons
 - 2024 Westpac Hackathon
-    - What failed
-    - What I learnt:
+    - What failed: This was my first Hackathon, and as a first year only team, no-one really knew web development.
+    - What I learnt: Despite the failure, the version control skills still carried on.
 - 2025 QUT Hackathon
-    - What failed: Original idea was to create a volleyball live match analysis software. Ended up stopping early
-    - What I learnt:
+    - What failed: Original idea was to create a volleyball live match analysis software. Ended up stopping early.
+    - What I learnt: I think for this one we simply gave up too early; I also was not too familiar with web development as this point in time.
 
