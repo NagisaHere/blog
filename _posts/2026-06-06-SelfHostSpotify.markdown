@@ -7,7 +7,7 @@ categories:
 tags: homelab casaos music navidrome
 ---
 
-WIP! I've been putting together a self-hosted music stack on my CasaOS homelab that covers most of what I used Spotify for — a library, recommendations, downloading, and a mobile player. Here's how the pieces fit together.
+In peak exam procrastination, I've been putting together a self-hosted music stack on my home server; recommendations, downloading, and a mobile player. Here's how the pieces fit together.
 
 ## Overview
 
@@ -30,13 +30,12 @@ The key idea is that **Navidrome, Explo, Downtify, and Yubal all share the same 
 
 ## Shared Media Folder
 
-Before installing anything, pick a single host path for your music library — e.g. `/DATA/Media/music` on CasaOS — and mount it into every container that reads or writes music files.
+Before installing anything, pick a single host path for your music library e.g. `/DATA/Media/music` on CasaOS and mount it into every container that reads or writes music files. Doing this via the CasaOS UI was relatively straightforward.
 
-<!-- TODO: add your actual CasaOS path -->
 
 ## Music Library — Navidrome
 
-Navidrome is the Subsonic-compatible server that actually streams your collection. On CasaOS this is a straightforward one-click install from the app store.
+Navidrome is the Subsonic-compatible server that actually streams your collection, which we can install from the app store.
 
 ### Setup
 
@@ -48,11 +47,14 @@ Navidrome is the Subsonic-compatible server that actually streams your collectio
 
 Navidrome handles transcoding, playlists, and the Subsonic API that mobile clients like Substreamer talk to.
 
+### ListenBrainz
+Before we proceed, its best to create a free listen brainz account [here](https://listenbrainz.org/). You'll need this to submit your listens, so grab your user token [here](https://listenbrainz.org/profile/).
+
 ## Music Recommendations — Explo
 
 [Explo](https://github.com/LumePart/Explo) is a self-hosted alternative to Spotify's Discover Weekly. It pulls personalised playlists from [ListenBrainz](https://listenbrainz.org/), downloads missing tracks via YouTube, and creates playlists directly in Navidrome.
 
-Rather than the CasaOS app store, I deployed Explo using the base `docker-compose.yaml` from the repo and finished configuration through the web UI.
+I deployed Explo using the base `docker-compose.yaml` from the repo and finished configuration through the web UI.
 
 ### Docker Compose
 
@@ -79,12 +81,13 @@ services:
 
 Replace `/path/to/media/music` with the same shared media folder Navidrome uses. Explo recommends putting its downloads in a subfolder like `/data/explo/`.
 
+
 ### Web UI Setup
 
 1. Run `docker compose up -d` and open `http://YOUR_SERVER_IP:7288`.
 2. Log in with the credentials from the compose file.
 3. Follow the setup wizard:
-   - **Music system** — connect to Navidrome (URL, username, password).
+   - **Music system** — connect to Navidrome (URL, username, password). Note here your url should be http://navidrome:4533.
    - **ListenBrainz** — link your account so Explo can fetch Weekly Exploration / Weekly Jams / Daily Jams playlists.
    - **Downloaders** — enable YouTube via yt-dlp.
 
@@ -101,9 +104,17 @@ The free tier (10,000 units/day) is more than enough for a weekly discovery tool
 
 <!-- TODO: note any ListenBrainz / Last.fm scrobbling setup you use to feed Explo -->
 
+## Connecting Explo and Navidrome
+By default, Navidrome and Explo won't be located on the same network. Navidrome comes with its own bridge network you can use, which we can set in the ui.
+
+
+
+Go listen to a couple songs, and when a daily recommended playlist is generated, you can manually download through the test here to see if it works.
+<!-- image or smth -->
+
 ## Music Downloading
 
-For manually grabbing tracks outside of Explo's automated discovery, I use two downloaders — one for Spotify links and one for YouTube Music.
+For manually grabbing tracks outside of Explo's automated discovery, I use two downloaders; one for Spotify links and one for YouTube Music.
 
 ### Downtify (Spotify)
 
@@ -125,7 +136,6 @@ services:
 
 Open `http://YOUR_SERVER_IP:8000`, paste a Spotify link, and files land directly in the shared media folder with album art and metadata.
 
-<!-- TODO: mention playlist monitor / preferred format if relevant -->
 
 ### Yubal (YouTube Music)
 
@@ -149,14 +159,10 @@ services:
       - ./yubal/config:/app/config
     restart: unless-stopped
 ```
-
-Note the port mapping — if Downtify already uses `8000`, map Yubal to a different host port (e.g. `8001`).
+You can just use any free ports on your host.
 
 Make sure `PUID`/`PGID` match your CasaOS user so file permissions stay consistent across all containers.
 
-<!-- TODO: add notes on cookies if YouTube rate-limits you -->
-
-After either downloader finishes, trigger a Navidrome scan (or wait for the next scheduled one) and new tracks show up in the library.
 
 ## Music Player (Mobile) — Substreamer
 
@@ -168,22 +174,10 @@ After either downloader finishes, trigger a Navidrome scan (or wait for the next
 2. Add your Navidrome server URL — use your Tailscale hostname or reverse-proxy URL if connecting remotely.
 3. Enter your Navidrome username and password.
 
-<!-- TODO: add Tailscale / reverse proxy details -->
+### Using with VPN
 
-That's it — your entire self-hosted library is streamable from your phone, including anything Explo, Downtify, or Yubal added.
+Since of course
 
-## Putting It All Together
+That's it; your entire self-hosted library is streamable from your phone, including anything Explo, Downtify, or Yubal added.
 
-```
-Downtify ──┐
-Yubal    ──┼──► Shared Media Folder ──► Navidrome ──► Substreamer (mobile)
-Explo    ──┘         ▲
-                     │
-              ListenBrainz (recommendations)
-```
 
-1. **Download** music with Downtify (Spotify) or Yubal (YouTube Music), or let Explo discover and fetch new tracks automatically.
-2. **Stream** everything through Navidrome.
-3. **Listen** on your phone with Substreamer.
-
-<!-- TODO: closing thoughts, gotchas, things still to configure -->
