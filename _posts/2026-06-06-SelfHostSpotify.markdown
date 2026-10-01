@@ -19,7 +19,7 @@ In peak exam procrastination, I've been putting together a self-hosted music sta
 | Downloading (YouTube Music) | [Yubal](https://github.com/guillevc/yubal) |
 | Mobile player | [Substreamer](https://substreamer.org/) |
 
-The key idea is that **Navidrome, Explo, Downtify, and Yubal all share the same media folder**. Downloads land in one place, Navidrome indexes them, and Explo writes its discovered tracks into the same library.
+**Navidrome, Explo, Downtify, and Yubal all share the same media folder**. Downloads land in one place, Navidrome indexes them, and Explo writes its discovered tracks into the same library.
 
 ```
 /path/to/media/music
@@ -43,11 +43,8 @@ Navidrome is the Subsonic-compatible server that actually streams your collectio
 2. Point the music volume to your shared media folder (e.g. `/DATA/Media/music`).
 3. Open the web UI, create an admin account, and let Navidrome scan the library.
 
-<!-- TODO: add screenshots / your Navidrome URL setup -->
-
 Navidrome handles transcoding, playlists, and the Subsonic API that mobile clients like Substreamer talk to.
 
-### ListenBrainz
 Before we proceed, its best to create a free listen brainz account [here](https://listenbrainz.org/). You'll need this to submit your listens, so grab your user token [here](https://listenbrainz.org/profile/).
 
 ## Music Recommendations — Explo
@@ -79,7 +76,7 @@ services:
       - UI_PASSWORD=yourpassword
 ```
 
-Replace `/path/to/media/music` with the same shared media folder Navidrome uses. Explo recommends putting its downloads in a subfolder like `/data/explo/`.
+Replace `/path/to/media/music` with the same shared media folder Navidrome uses. Explo recommends putting its downloads in a subfolder like `/data/explo/`. Make sue to also set your web ui user and password as well.
 
 
 ### Web UI Setup
@@ -102,7 +99,7 @@ Explo needs a YouTube Data API key from [Google Cloud Console](https://console.c
 
 The free tier (10,000 units/day) is more than enough for a weekly discovery tool.
 
-<!-- TODO: note any ListenBrainz / Last.fm scrobbling setup you use to feed Explo -->
+Once you open the web ui, you should be able to follow its instructions to set it up.
 
 ## Connecting Explo and Navidrome
 By default, Navidrome and Explo won't be located on the same network. Navidrome comes with its own bridge network you can use, which we can set in the ui.
@@ -136,7 +133,6 @@ services:
 
 Open `http://YOUR_SERVER_IP:8000`, paste a Spotify link, and files land directly in the shared media folder with album art and metadata.
 
-
 ### Yubal (YouTube Music)
 
 [Yubal](https://github.com/guillevc/yubal) does the same for YouTube Music — paste a track, album, or playlist link and get a tagged, organised library.
@@ -163,6 +159,8 @@ You can just use any free ports on your host.
 
 Make sure `PUID`/`PGID` match your CasaOS user so file permissions stay consistent across all containers.
 
+After either downloader finishes, trigger a Navidrome scan (or wait for the next scheduled one) and new tracks show up in the library.
+>>>>>>> d529a7f (added local music setup)
 
 ## Music Player (Mobile) — Substreamer
 
@@ -176,8 +174,9 @@ Make sure `PUID`/`PGID` match your CasaOS user so file permissions stay consiste
 
 ### Using with VPN
 
-Since of course
+So long as you have a way to reach your home network (e.g. via tailscale), that's it; your entire self-hosted library is streamable from your phone, including anything Explo, Downtify, or Yubal added.
 
-That's it; your entire self-hosted library is streamable from your phone, including anything Explo, Downtify, or Yubal added.
-
+1. **Download** music with Downtify (Spotify) or Yubal (YouTube Music), or let Explo discover and fetch new tracks automatically.
+2. **Stream** everything through Navidrome.
+3. **Listen** on your phone with Substreamer.
 
